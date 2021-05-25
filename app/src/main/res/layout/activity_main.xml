@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg"/>
+
+
+   <!-- <TextView
+        android:gravity="center_vertical"
+        android:text="@string/quotes"
+        android:maxLines="1"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/nunito"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:drawableStart="@drawable/ic_search"
+        android:layout_below="@id/title"
+        android:layout_marginTop="38dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/shape_edtext"/>-->
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:text="Flowers"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:layout_margin="10dp"
+        android:layout_below="@id/title"
+        android:fontFamily="@font/rosario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:text="To plant a garden is to believe in tomorrow."
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/btn_about"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        android:background="@drawable/ic_about"/>
+
+ <!--   <GridLayout
+        android:id="@+id/grid_layout"
+        android:layout_marginTop="15dp"
+        android:columnOrderPreserved="false"
+        android:alignmentMode="alignMargins"
+        android:layout_below="@id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:columnCount="2"
+
+        >
+
+        <androidx.cardview.widget.CardView
+            app:cardElevation="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1">
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_gravity="start"
+                >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_indoor" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginStart="15dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="Indoor"
+                        android:textSize="28sp"
+                        android:fontFamily="@font/nunito"
+                       />
+                    <TextView
+                        android:id="@+id/indoor_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="346 Flowers"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/nunito"
+                        />
+                </LinearLayout>
+
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            app:cardElevation="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1">
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_gravity="end"
+                >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_outdoor" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginStart="15dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="Outdoor"
+                        android:textSize="28sp"
+                        android:fontFamily="@font/nunito"
+                        />
+                    <TextView
+                        android:id="@+id/outdoor_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="74 Flowers"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/nunito"
+                        />
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+    </GridLayout>-->
+   <ScrollView
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_item"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_list">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </ScrollView>
+
+
+
+
+
+</RelativeLayout>
